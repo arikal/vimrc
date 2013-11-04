@@ -1,4 +1,6 @@
 .netrwhist
-bundle/
+*.swp
+bundle/*
+!bundle/vundle
 templates/pdv/*.tpl
 tmp/*
