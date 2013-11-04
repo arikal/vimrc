@@ -1,0 +1,12 @@
+/**
+ * Description...
+ *
+ * @package 
+ *{{#interfaces}}
+ * @uses {{name}}{{/interfaces}}{{#parent}}
+ * @uses {{name}}{{/parent}}{{#abstract}}
+ * @abstract{{/abstract}}{{#final}}
+ * @final{{/final}}
+ * @author Chuck Norris <chuck.norris@mobilefun.co.uk>
+ * @copyright Copyright (c) 2013 Mobile Fun Limited
+ */

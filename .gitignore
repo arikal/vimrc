@@ -1,0 +1,4 @@
+.netrwhist
+bundle/
+templates/pdv/*.tpl
+tmp/*
