@@ -65,7 +65,6 @@ set smartindent
 set softtabstop=4
 set statusline=%F\ [line\ %l/%L]\ [buffer\ %n]\ [column\ %c]
 set tabstop=4
-set textwidth=120
 set title
 set t_Co=256
 set wildmenu
