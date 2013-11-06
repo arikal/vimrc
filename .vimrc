@@ -22,6 +22,7 @@ filetype indent plugin on
 let g:pdv_template_dir=$HOME."/.vim/templates/pdv"
 let g:PIVCreateDefaultMappings=0
 let mapleader=","
+let NERDTreeMapOpenInTab="<ENTER>"
 nnoremap <C-D> :call pdv#DocumentCurrentLine()<CR>
 noremap <C-N><C-N> :set invnumber<CR>
 noremap <C-P><C-P> :set invpaste<CR>
