@@ -69,3 +69,16 @@ set title
 set t_Co=256
 set wildmenu
 syntax on
+
+function! PhpDocHelper()
+    let filename=expand("<cword>")
+    let filename=tolower(filename)
+    let filename=$HOME."/.vim/docs/php/".filename.".html"
+    let filename=substitute(filename, "_", "-", "g")
+    if filereadable(filename)
+        let command="!lynx ".filename
+        execute command
+    endif
+endfunction
+
+noremap <silent><leader>d :call PhpDocHelper()<CR>

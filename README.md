@@ -9,6 +9,8 @@ $ ln -s .vim/.vimrc .
 $ cd .vim
 $ git submodule init
 $ git submodule update
+$ chmod u+x setup.sh
+$ ./setup.sh
 ````
 
 Now run VIM and type:
