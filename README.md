@@ -11,6 +11,7 @@ $ git submodule init
 $ git submodule update
 $ chmod u+x setup.sh
 $ ./setup.sh
+$ sudo apt-get install lynx
 ````
 
 Now run VIM and type:
