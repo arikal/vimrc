@@ -82,3 +82,7 @@ function! PhpDocHelper()
 endfunction
 
 noremap <silent><leader>d :call PhpDocHelper()<CR>
+
+if filereadable("vimrc_custom")
+    source vimrc_custom
+endif

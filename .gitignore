@@ -5,3 +5,4 @@ bundle/*
 docs/*
 templates/pdv/*.tpl
 tmp/*
+vimrc_custom

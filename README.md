@@ -21,3 +21,5 @@ Now run VIM and type:
 ```
 
 Finally, copy the sample docblock template files in `templates/pdv` and edit as required.
+
+You can customise the vimrc configuration by adding the file `vimrc_custom` and adding additional configuration to it.
