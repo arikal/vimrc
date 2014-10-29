@@ -19,3 +19,5 @@ Now run VIM and type:
 ```bash
 :BundleInstall
 ```
+
+Finally, copy the sample docblock template files in `templates/pdv` and edit as required.
