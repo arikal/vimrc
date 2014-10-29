@@ -8,6 +8,7 @@ call vundle#rc()
 
 Bundle 'ervandew/supertab'
 Bundle 'evidens/vim-twig'
+Bundle 'joonty/vdebug'
 Bundle 'mbbill/undotree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
