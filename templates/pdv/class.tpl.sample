@@ -7,6 +7,6 @@
  * @uses {{name}}{{/parent}}{{#abstract}}
  * @abstract{{/abstract}}{{#final}}
  * @final{{/final}}
- * @author Chuck Norris <chuck.norris@mobilefun.co.uk>
- * @copyright Copyright (c) 2013 Mobile Fun Limited
+ * @author Chuck Norris <chuck.norris@acmetradingco.example>
+ * @copyright Copyright (c) 2014 Acme Trading Co.
  */
