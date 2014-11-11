@@ -86,6 +86,6 @@ endfunction
 
 noremap <silent><leader>d :call PhpDocHelper()<CR>
 
-if filereadable($HOME."/.vim/vimrc_custom")
-    execute ":source ".$HOME."/.vim/vimrc_custom"
+if filereadable($HOME."/.vim/custom.vim")
+    execute ":source ".$HOME."/.vim/custom.vim"
 endif
