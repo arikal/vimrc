@@ -24,6 +24,7 @@ autocmd ColorScheme * highlight Normal ctermbg=none
 filetype indent plugin on
 let g:pdv_template_dir=$HOME."/.vim/templates/pdv"
 let g:PIVCreateDefaultMappings=0
+let g:vimprj_dirNameForSearch="project.vim"
 let mapleader=","
 nnoremap <C-D> :call pdv#DocumentCurrentLine()<CR>
 noremap <C-N><C-N> :set invnumber<CR>
