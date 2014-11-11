@@ -6,16 +6,18 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Bundle 'ervandew/supertab'
-Bundle 'evidens/vim-twig'
-Bundle 'joonty/vdebug'
-Bundle 'mbbill/undotree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'spf13/PIV'
-Bundle 'tobyS/pdv'
-Bundle 'tobyS/vmustache'
-Bundle 'Townk/vim-autoclose'
+Bundle "ervandew/supertab"
+Bundle "evidens/vim-twig"
+Bundle "joonty/vdebug"
+Bundle "mbbill/undotree"
+Bundle "scrooloose/nerdcommenter"
+Bundle "scrooloose/nerdtree"
+Bundle "spf13/PIV"
+Bundle "tobyS/pdv"
+Bundle "tobyS/vmustache"
+Bundle "Townk/vim-autoclose"
+Bundle "vim-scripts/DfrankUtil"
+Bundle "vim-scripts/vimprj"
 " end vundle
 
 autocmd ColorScheme * highlight Normal ctermbg=none
