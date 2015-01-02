@@ -54,8 +54,9 @@ set ignorecase
 set incsearch
 set laststatus=2
 set listchars=tab:>-,trail:·,eol:$
+set modeline
+set modelines=1
 set noexrc
-set nomodeline
 set nostartofline
 set notimeout ttimeout ttimeoutlen=200
 set nowrap
