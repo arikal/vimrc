@@ -1,12 +1,10 @@
-color evening
-
 " start vundle
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Bundle "ervandew/supertab"
+"Bundle "ervandew/supertab"
 Bundle "evidens/vim-twig"
 Bundle "joonty/vdebug"
 Bundle "mbbill/undotree"
@@ -25,20 +23,28 @@ Bundle "editorconfig/editorconfig-vim"
 Bundle "majutsushi/tagbar"
 Bundle "jistr/vim-nerdtree-tabs"
 Bundle "ctrlpvim/ctrlp.vim"
+Bundle "altercation/vim-colors-solarized"
+Bundle "sickill/vim-monokai"
+Bundle "morhetz/gruvbox"
+Bundle "ajh17/VimCompletesMe"
 " end vundle
 
-autocmd ColorScheme * highlight Normal ctermbg=none
 filetype indent plugin on
 let g:pdv_template_dir=$HOME."/.vim/templates/pdv"
 let g:PIVCreateDefaultMappings=0
 let g:vimprj_dirNameForSearch="project.vim"
 let g:EditorConfig_core_mode="external_command"
-let g:SuperTabDefaultCompletionType=""
+"let g:SuperTabDefaultCompletionType=""
 let g:tagbar_autoclose=1
 let g:tagbar_autofocus=1
 let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore="node_modules\|\.git"
+let g:ctrlp_user_command=[".git", "cd %s && git ls-files -co --exclude-standard"]
+let g:ctrlp_prompt_mappings={
+    \ "AcceptSelection(\"e\")": ["<C-t>"],
+    \ "AcceptSelection(\"t\")": ["<CR>", "<2-LeftMouse>"]
+    \ }
 let mapleader=","
+"let &colorcolumn=join(range(121,999),",")
 nnoremap <C-D> :call pdv#DocumentCurrentLine()<CR>
 noremap <C-N><C-N> :set invnumber<CR>
 noremap <C-P><C-P> :set invpaste<CR>
@@ -62,6 +68,7 @@ set backupcopy=yes
 set backupdir=~/.vim/tmp
 set backup
 set confirm
+"set cursorcolumn
 set cursorline
 set expandtab
 set foldlevel=1
@@ -75,12 +82,13 @@ set laststatus=2
 set listchars=tab:>-,trail:·,eol:$
 set modeline
 set modelines=1
+set modifiable
 set noexrc
 set nostartofline
 set notimeout ttimeout ttimeoutlen=200
 set nowrap
 set number
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 set ruler
 set scrolloff=5
 set shiftwidth=4
@@ -95,15 +103,21 @@ set t_Co=256
 set wildmenu
 syntax on
 
+"function! PhpDocHelper()
+"    let filename=expand("<cword>")
+"    let filename=tolower(filename)
+"    let filename=$HOME."/.vim/docs/php/".filename.".html"
+"    let filename=substitute(filename, "_", "-", "g")
+"    if filereadable(filename)
+"        let command="!lynx ".filename
+"        execute command
+"    endif
+"endfunction
+
 function! PhpDocHelper()
-    let filename=expand("<cword>")
-    let filename=tolower(filename)
-    let filename=$HOME."/.vim/docs/php/".filename.".html"
-    let filename=substitute(filename, "_", "-", "g")
-    if filereadable(filename)
-        let command="!lynx ".filename
-        execute command
-    endif
+    let url=expand("<cword>")
+    let url="http://www.php.net/search.php?pattern=".url
+    silent execute "!xdg-open '".url."' &> /dev/null &" | redraw!
 endfunction
 
 noremap <silent><leader>d :call PhpDocHelper()<CR>
@@ -111,3 +125,9 @@ noremap <silent><leader>d :call PhpDocHelper()<CR>
 if filereadable($HOME."/.vim/custom.vim")
     execute ":source ".$HOME."/.vim/custom.vim"
 endif
+
+color gruvbox
+
+"autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight CursorLine ctermbg=red cterm=none
+autocmd ColorScheme * highlight CursorColumn ctermbg=red cterm=none
